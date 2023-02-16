@@ -69,3 +69,5 @@ wcwidth==0.2.5
 Werkzeug==2.2.2
 WTForms==3.0.1
 zipp==3.11.0
+whitenoise==6.2.0
+gunicorn==20.1.0
