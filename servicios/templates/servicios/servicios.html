@@ -1,0 +1,45 @@
+{% extends "ProyectoWebApp/base.html" %}
+   
+   
+{% load static %} 
+  
+
+{% block Contenido %} 
+
+
+    {% for servicio in servicios%}          
+    
+
+<section class="page-section clearfix">         <!--Modificado (el código de la línea 13 a 26 de "home.html" (Heading)) -->
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{servicio.imagen.url}}" alt=""  style="width: 50%;">   <!--Modificado (cambie el "src" y el "style )-->
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">{{servicio.titulo}}</span>                     <!--Modificado -->
+            <span class="section-heading-upper">{{servicio.contenido}}</span>                                              <!--Modificado -->
+          </h2>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<!--<div><p>
+
+
+    <h2 style="color:white;">{{servicio.titulo}}</h2>       
+    <p style="color:white;">{{servicio.contenido}}</p>
+    <p><img src="{{servicio.imagen.url}}"></p>     el ".url" lo pongo para que me carge la imagen de la carpeta media (se explica en el video35 curso django)
+
+                                            
+</p></div>  -->                                         
+
+        {% endfor %}
+ 
+
+ {% endblock %}

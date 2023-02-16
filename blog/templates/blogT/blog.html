@@ -1,0 +1,59 @@
+{% extends "ProyectoWebApp/base.html" %}
+   
+   
+{% load static %} 
+  
+
+{% block Contenido %} 
+
+
+    {% for post in posts%}          <!--Modificado (el código de la línea 13 a 26 de "home.html" (Heading)) -->
+
+
+<section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}}" alt=""  style="width: 50%;">   <!--Modificado (cambie el "src" y el "style )-->
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">{{post.titulo}}</span>                     <!--Modificado -->
+            <span class="section-heading-upper">{{post.contenido}}</span>                                              <!--Modificado -->
+          </h2>
+          
+          <div style="text-align: left; font-size: 0.8em;">
+            
+            Autor: {{post.autor}}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+                                     
+
+        {% endfor %}
+ 
+        <section>
+            <div style="width:75%; margin: auto; text-align: center; color: white;">
+            
+                Categorias: 
+                
+                {% for post in posts %}
+
+                    {% for categoria in post.categorias.all %}      <!-- "post.categorias.all" me devuelve un queryset (14:45 video40)  -->   <!--ese queryset es de "class Categoria" de  models.py .Por eso utilizo {{categoria.nombre}}  -->
+                                                                                                                                                                                                                                                <!--DATITO -->     
+                     <a href="{% url 'categoria' categoria.id %}" class="linksCategorias">{{categoria.nombre}} </a>&nbsp;&nbsp;&nbsp;   <!--vel "href" es para que cuando haga click en "{{categoria.nombre}}"  me redirija al path "categoria" (de "name") de la urls.py ----- "categoria.id" me devuelve el "id" de la class Categoria de models.py (recordar que al haber creado las relaciones de tablas estas se identificaron con un id (7:51 video 41))   -->                
+                                                            <!-- esta "class" se llama de gestion.css (está dentro de static/css) -->
+                     {% endfor %}
+  
+                {% endfor %}
+            
+             </div>   <!-- "text-align" es para centrar el texto y el "margin" para centrar el contenido del texto -->
+         </section>
+
+ {% endblock %}
+
+
+
