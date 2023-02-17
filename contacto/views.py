@@ -1,4 +1,4 @@
-#from tkinter.tix import Form
+
 from django.shortcuts import render, redirect
 from .forms import FormularioContacto
 from django.core.mail import EmailMessage
