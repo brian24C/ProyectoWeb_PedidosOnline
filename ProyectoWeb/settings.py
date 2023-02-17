@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS=['https://web-production-b0885.up.railway.app']
+
 
 # Application definition
 
@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     "crispy_forms",
     "pedidos",
 ]
+
+SITE_ID = 1
+CSRF_TRUSTED_ORIGINS=['https://web-production-b0885.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
