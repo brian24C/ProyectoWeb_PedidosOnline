@@ -51,10 +51,11 @@ INSTALLED_APPS = [
     "autenticacion",
     "crispy_forms",
     "pedidos",
+    'crispy_bootstrap4',
 ]
 
-SITE_ID = 1
-CSRF_TRUSTED_ORIGINS=['https://web-production-b0885.up.railway.app']
+#SITE_ID = 1
+#CSRF_TRUSTED_ORIGINS=['https://web-production-b0885.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -139,7 +140,7 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-STATICFILES_DIRS= [ os.path.join(BASE_DIR, "static"),]
+# STATICFILES_DIRS= [ os.path.join(BASE_DIR, "static"),]
 
 
 
