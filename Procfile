@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn proyectoweb.wsgi
+web: python manage.py migrate && gunicorn ProyectoWeb.wsgi --error-logfile error.log
