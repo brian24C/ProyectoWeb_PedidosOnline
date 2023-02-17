@@ -21,9 +21,6 @@ dnspython==2.2.1
 dominate==2.7.0
 executing==1.1.1
 filelock==3.8.0
-Flask==2.2.2
-Flask-Bootstrap==3.3.7.1
-Flask-WTF==1.0.1
 idna==3.4
 importlib-metadata==5.1.0
 inflection==0.5.1
