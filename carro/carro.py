@@ -1,5 +1,5 @@
 
-from turtle import st
+#from turtle import st
 
 
 class Carro:

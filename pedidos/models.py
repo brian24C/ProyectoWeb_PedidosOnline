@@ -1,7 +1,7 @@
-from ssl import create_default_context
-from tabnanny import verbose
-from typing import OrderedDict
-from zlib import DEF_BUF_SIZE
+#from ssl import create_default_context
+#from tabnanny import verbose
+#from typing import OrderedDict
+#from zlib import DEF_BUF_SIZE
 from django.db import models
 #from django.contrib.auth.models import User   <-- MEDIANO IMPORTANTE :  Si pongo este codigo entonces la linea 15 ya no lo pondría.
 from django.contrib.auth import get_user_model # esta "get_user_model" nos dará el usuario ACTIVO
